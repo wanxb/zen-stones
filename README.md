@@ -13,6 +13,7 @@ Zen Stones is a standalone static web piece inspired by dry landscape gardens an
 - Dynamic rake-like line flow around objects
 - Export the current scene as an image
 - Hide interface elements for a pure visual mode
+- Visible GitHub repo entry inside the page UI
 - Fully static and deployment-friendly
 
 ## Positioning
@@ -29,8 +30,27 @@ This project works well as:
 zen-stones/
 ├── index.html
 ├── README.md
-└── favicon.svg
+├── favicon.svg
+├── css/
+│   ├── base.css
+│   └── app.css
+├── js/
+│   ├── data.js
+│   ├── scene.js
+│   ├── ui.js
+│   └── main.js
+└── assets/
 ```
+
+## Architecture Notes
+
+- `index.html` is the page shell and resource loader
+- `css/base.css` contains the base interaction and reset layer
+- `css/app.css` contains the visual identity for this project
+- `js/data.js` stores layout configuration values
+- `js/scene.js` manages canvas rendering, drag state, and stone behavior
+- `js/ui.js` manages DOM controls, stats sync, and interface visibility
+- `js/main.js` bootstraps the application
 
 ## Local Preview
 
@@ -52,8 +72,12 @@ This project is static-only and can be deployed to:
 - GitHub Pages
 - Any basic static host
 
+## Repository
+
+- GitHub: <https://github.com/wanxb/zen-stones>
+
 ## Notes
 
 - No build tooling is required
-- Works as a single-file interactive web artwork
-- Easy to embed inside a wider collection or deploy alone
+- Works as a single-file-feel experience with a cleaner internal structure
+- Refactored from a single HTML prototype into a clearer static project layout

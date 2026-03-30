@@ -1,0 +1,43 @@
+:root {
+  --bg: #f3ecde;
+  --sand: #efe5d4;
+  --ink: #2c2925;
+  --muted: rgba(44,41,37,.66);
+  --line: rgba(44,41,37,.12);
+  --accent: #b78152;
+  --panel: rgba(255,255,255,.58);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Noto Serif SC", "Songti SC", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body { overflow: hidden; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+.ghost-link {
+  border: 1px solid rgba(44,41,37,.1);
+  background: rgba(255,255,255,.72);
+  color: var(--ink);
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .18s ease;
+  font: inherit;
+}
+
+button:hover,
+.ghost-link:hover {
+  background: white;
+  transform: translateY(-1px);
+}
